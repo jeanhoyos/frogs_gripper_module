@@ -19,7 +19,7 @@ RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 
 RUN python get-pip.py
 RUN pip install wrapt inflection
-#RUN pip install Cython
+
 
 # Define a user to execute the script
 ARG UNAME=ros
