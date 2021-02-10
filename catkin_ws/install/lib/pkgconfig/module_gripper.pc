@@ -1,0 +1,8 @@
+prefix=/home/ros/catkin_ws/install
+
+Name: module_gripper
+Description: Description of module_gripper
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy frogs_msgs

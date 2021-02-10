@@ -37,6 +37,41 @@ git submodule add git@github.com:jeanhoyos/frogs_robot_module.git src/frogs_robo
 
 
 
+## How to hide files
+
+
+- Adapt your .gitignore file in order to not push src/ in order to hide the source code
+
+
+The .gitignore file ensures that files not tracked by Git remain untracked.
+
+Just adding folders/files to a .gitignore file will not untrack them -- they will remain tracked by Git.
+
+To untrack files, it is necessary to remove from the repository the tracked files listed in .gitignore file. Then re-add them and commit your changes.
+
+The easiest, most thorough way to do this is to remove and cache all files in the repository, then add them all back. All folders/files listed in .gitignore file will not be tracked. From the top folder in the repository run the following commands:
+
+```
+git rm -r --cached .
+git add .
+```
+
+Now your git status should not be affected by the files mentioned in the .gitignore
+
+
+- Change the setup.py to update the module name
+
+- Then build your package. The second line will create an additional folder that can be push on git.
+```
+catkin_make
+catkin_make install
+```
+
+Now you can push your changed. After a git status you should see that only the /install folder will be commitable.
+
+
+ 
+
 
 
 
