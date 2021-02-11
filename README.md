@@ -251,6 +251,3 @@ Now you can push your changed. After a git status you should see that only the /
 
 
 
-
-
-
